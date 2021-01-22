@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -32,77 +32,85 @@
       <!-- Timeblocks go here -->
       <!-- Reference the calculator activity (unit 5) -->
       <!-- Use row (referenced in stylesheet) -->
+      <!-- Save Button (link to javascript) -->
+      <!-- Somehow link to the prestyled save button ? -->
+      <!-- Use Military Time -->
       <div class="row">
-        <div id="sevenAM" data-type="time-block" class="col-md-2 border border-secondary p-4 text-center">7AM</div>
-        <textarea id="seven" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <!-- Save Button (link to javascript) -->
-        <!-- Somehow link to the prestyled save button ? -->
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-b1 hour" id="eightAM">8AM</div>
+        <div class="col-8 my-col col-b2 time-block" value="8">
+          <!-- leave the textarea blank for the user to input information -->
+          <textarea class="task"></textarea>
+        </div>
+        <!-- replace save button with icon -->
+        <div class="col-1 my-col col-b3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="eightAM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">8AM</div>
-        <textarea id="eight" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-b1 hour" id="nineAM">9AM</div>
+        <div class="col-8 my-col col-b2 time-block" value="9">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-b3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="nineAM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">9AM</div>
-        <textarea id="nine" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-b1 hour" id="tenAM">10AM</div>
+        <div class="col-8 my-col col-b2 time-block" value="10">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-b3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="tenAM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">10AM</div>
-        <textarea id="ten" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-c1 hour" id="elevenAM">11AM</div>
+        <div class="col-8 my-col col-c2 time-block" value="11">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-c3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="elevenAM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">11AM</div>
-        <textarea id="eleven" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-a1 hour" id="twelvePM">12PM</div>
+        <div class="col-8 my-col col-a2 time-block" value="12">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-a3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="twelvePM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">12PM</div>
-        <textarea id="twelve" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-b1 hour" id="onePM">1PM</div>
+        <div class="col-8 my-col col-b2 time-block" value="13">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-b3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="onePM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">1PM</div>
-        <textarea id="one" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-c1 hour" id="twoPM">2PM</div>
+        <div class="col-8 my-col col-c2 time-block" value="14">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-c3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="twoPM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">2PM</div>
-        <textarea id="two" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-c1 hour" id="threePM">3PM</div>
+        <div class="col-8 my-col col-c2 time-block" value="15">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-c3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="threePM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">3PM</div>
-        <textarea id="three" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-c1 hour" id="fourPM">4PM</div>
+        <div class="col-8 my-col col-c2 time-block" value="16">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-c3 saveBtn">Save</div>
       </div>
       <div class="row">
-        <div id="fourPM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">4PM</div>
-        <textarea id="four" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
+        <div class="col-2 my-col col-c1 hour" id="fivePM">5PM</div>
+        <div class="col-8 my-col col-c2 time-block" value="17">
+          <textarea class="task"></textarea>
+        </div>
+        <div class="col-1 my-col col-c3 saveBtn">Save</div>
       </div>
-      <div class="row">
-        <div id="fivePM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">5PM</div>
-        <textarea id="five" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
-      </div>
-      <div class="row">
-        <div id="sixPM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">6PM</div>
-        <textarea id="six" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
-      </div>
-      <div class="row">
-        <div id="sevenPM" data-type="time-block" class="col-1 col-md-2 border border-secondary p-4 text-center">7PM</div>
-        <textarea id="seven" class="col-6 col-md-8 border border-3 border-secondary p-1 text-center"></textarea>
-        <button data-type="saveBtn" class="bg-info col-md-2 col-1 border-3 border-secondary p-4 text-center"></button>
-      </div>
-      <br><br>
+    </div>
+    <br /><br />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-

@@ -7,19 +7,129 @@
 
 // Date
 // Using date object
-var currentDay = new Date();
-var date =
-  currentDay.getMonth() +
-  1 +
-  "-" +
-  currentDay.getDate() +
-  "-" +
-  currentDay.getFullYear();
-// why does this have to be declared after
-$("#currentDay").text(date);
+// var currentDay = new Date();
+// var date =
+//   currentDay.getMonth() +
+//   1 +
+//   "-" +
+//   currentDay.getDate() +
+//   "-" +
+//   currentDay.getFullYear();
+// // why does this have to be declared after
+// $("#currentDay").text(date);
 
 // color-coded
 
 //Create a save button with an on-click event
 
 // Local storage
+
+// var currentDate = $("#currentDay");
+
+// currentDate.text(
+//   days[new Date().getDay()] +
+//     ", " +
+//     mons[new Date().getMonth()] +
+//     " " +
+//     new Date().getDate() +
+//     "th"
+// );
+
+// set item and get item with stringify
+// grab array with json.parse
+// add the classes with colors, military time
+
+// querySelector or getElementById()
+var eight = document.querySelector("#eightAM");
+var nine = document.querySelector("#nineAM");
+var ten = document.querySelector("#tenAM");
+var eleven = document.querySelector("#elevenAM");
+var twelve = document.querySelector("#twelvePM");
+var one = document.querySelector("#onePM");
+var two = document.querySelector("#twoPM");
+var three = document.querySelector("#threePM");
+var four = document.querySelector("#fourPM");
+var five = document.querySelector("#fivePM");
+
+var currentDate = $("#currentDay");
+
+var months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+// Use for past, present and future
+var days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+var years = ["2021", "2022", "2023", "2024"];
+var currentDay = new Date();
+
+var day = days[new Date().getDay()];
+var month = months[new Date().getMonth()];
+var date = currentDay.getDate();
+// var date =  new Date().getDate();
+var year = years[new Date().getFullYear()];
+var currentTime = new Date().getHours();
+
+if (date === 1 || date === 21 || date == 31) {
+  currentDate.text(day + " " + month + " " + date + "st" + ", " + year);
+} else if (date === 2 || date === 22) {
+  currentDate.text(day + " " + month + " " + date + "nd" + ", " + year);
+} else if (date === 3 || date === 23) {
+  currentDate.text(day + " " + month + " " + date + "rd" + ", " + year);
+} else {
+  currentDate.text(day + " " + month + " " + date + "th" + ", " + year);
+}
+
+// call time-block class, return an integer
+// this must be called before attr
+var timeBlock = $(".time-block");
+
+// return the attribute value
+//it returns the value of the FIRST matched element
+var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
+
+// using time, determine whether the task is past, present or future
+for (var i = 0; i < timeBlock.length; i++) {
+  var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
+  if (timeBlockValue < currentTime) {
+    $(timeBlock[i]).addClass("past");
+  } else if (timeBlockValue === currentTime) {
+    $(timeBlock[i]).addClass("present");
+  } else if (timeBlockValue > currentTime) {
+    $(timeBlock[i]).addClass("future");
+  }
+}
+
+// push to local storage as an array
+var userInput = [];
+
+function renderTasks() {
+  for (var i = 0; i < timeBlock.length; i++) {
+    console.log(timeBlockValue[i].children);
+  }
+}
+
+//click event to save users input, should link to the save button but for some reason this shit ISN'T WORKING
+$(".saveBtn").on("click", function () {
+  var savedTasks = $(this).prev().children().val();
+  // console.log(savedTasks);
+  localStorage.setItem("userInput", savedTasks);
+});
