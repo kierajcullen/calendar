@@ -129,7 +129,6 @@ function renderTasks() {
 
 //click event to save users input, should link to the save button but for some reason this shit ISN'T WORKING
 $(".saveBtn").on("click", function () {
-  var savedTasks = $(this).prev().children().val();
-  // console.log(savedTasks);
-  localStorage.setItem("userInput", savedTasks);
+  var savedInput = $(this).prev().children().val();
+  localStorage.setItem("userInput", savedInput);
 });
