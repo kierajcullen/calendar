@@ -10,4 +10,5 @@ https://github.com/kierajcullen/dailyplanner
 https://kierajcullen.github.io/dailyplanner
 
 # Webpage
+Add animation
 ![](img/github.png)
