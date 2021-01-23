@@ -74,6 +74,10 @@ textarea {
   padding: 25px;
 }
 
+button {
+  font-size: 24px;
+}
+
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
