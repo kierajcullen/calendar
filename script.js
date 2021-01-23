@@ -125,9 +125,7 @@ for (var i = 0; i < timeBlock.length; i++) {
 var userInput = [];
 
 function renderTasks() {
-  for (var i = 0; i < timeBlock.length; i++) {
-    console.log(timeBlockValue[i].children);
-  }
+  for (var i = 0; i < timeBlock.length; i++) {}
 }
 
 //click event to save users input, should link to the save button but for some reason this shit ISN'T WORKING
