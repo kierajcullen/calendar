@@ -39,18 +39,6 @@
 // grab array with json.parse
 // add the classes with colors, military time
 
-// querySelector or getElementById()
-var eight = document.querySelector("#eightAM");
-var nine = document.querySelector("#nineAM");
-var ten = document.querySelector("#tenAM");
-var eleven = document.querySelector("#elevenAM");
-var twelve = document.querySelector("#twelvePM");
-var one = document.querySelector("#onePM");
-var two = document.querySelector("#twoPM");
-var three = document.querySelector("#threePM");
-var four = document.querySelector("#fourPM");
-var five = document.querySelector("#fivePM");
-
 var currentDate = $("#currentDay");
 
 var months = [
@@ -128,19 +116,16 @@ function renderTasks() {
   for (var i = 0; i < timeBlock.length; i++) {}
 }
 
-//click event to save users input, should link to the save button but for some reason this shit ISN'T WORKING
-// $(".saveBtn").on("click", function () {
-//   var savedInput = $(this).prev().children().val();
-//   localStorage.setItem("userInput", savedInput);
-//   console.log(savedInput);
-// });
-
 $(".saveBtn").on("click", function () {
   //console.log(this)
   $(".task").each(function (i) {
     var text = $(this).val();
-    var time = $(this).attr(id);
+    // use dollar sign in console when using jquery
+    console.log(this);
+    // console.log($(this).parent().parent());
+    var time = $(this).attr("id");
     console.log(time, text);
     localStorage.setItem(time, text);
+    //display the local storage
   });
 });

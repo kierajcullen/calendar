@@ -10,8 +10,8 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  padding: 10px;
-  width: 95%;
+  /* padding: 10px; */
+  width: 100%;
   /* even though the text area is in the body it will not center this */
   text-align: center;
 }
@@ -71,10 +71,9 @@ textarea {
   /* border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; */
-  padding: 10px;
   border: 1px solid black;
   background-color: #06aed5;
-  color: white;
+  /* color: white; */
   border-radius: 10px;
 }
 
