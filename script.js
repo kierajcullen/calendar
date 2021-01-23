@@ -80,13 +80,13 @@ var currentTime = new Date().getHours();
 // console
 
 if (date === 1 || date === 21 || date == 31) {
-  currentDate.text(day + " " + month + " " + date + "st" + ", " + year);
+  currentDate.text(day + ", " + month + " " + date + "st" + ", " + year);
 } else if (date === 2 || date === 22) {
-  currentDate.text(day + " " + month + " " + date + "nd" + ", " + year);
+  currentDate.text(day + ", " + month + " " + date + "nd" + ", " + year);
 } else if (date === 3 || date === 23) {
-  currentDate.text(day + " " + month + " " + date + "rd" + ", " + year);
+  currentDate.text(day + ", " + month + " " + date + "rd" + ", " + year);
 } else {
-  currentDate.text(day + " " + month + " " + date + "th" + ", " + year);
+  currentDate.text(day + ", " + month + " " + date + "th" + ", " + year);
 }
 
 // call time-block class, return an integer
