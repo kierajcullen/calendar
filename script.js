@@ -112,10 +112,6 @@ for (var i = 0; i < timeBlock.length; i++) {
 // push to local storage as an array
 var userInput = [];
 
-function renderTasks() {
-  for (var i = 0; i < timeBlock.length; i++) {}
-}
-
 $(".saveBtn").on("click", function () {
   //console.log(this)
   $(".task").each(function (i) {
