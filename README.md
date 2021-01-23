@@ -1,3 +1,3 @@
 # Daily Planner
 
-![]/img/github.png
+![](img/github.png)
