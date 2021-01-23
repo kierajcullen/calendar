@@ -91,7 +91,7 @@ if (date === 1 || date === 21 || date == 31) {
 
 // call time-block class, return an integer
 // this must be called before attr
-var timeBlock = $(".time-block");
+var timeBlock = $(".timeBlock");
 
 // return the attribute value
 // it returns the value of the FIRST matched element
