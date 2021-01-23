@@ -78,15 +78,18 @@ var days = [
   "Saturday",
 ];
 
-var years = ["2021", "2022", "2023", "2024"];
+// var years = ["2021", "2022", "2023", "2024"];
 var currentDay = new Date();
 
 var day = days[new Date().getDay()];
 var month = months[new Date().getMonth()];
 var date = currentDay.getDate();
 // var date =  new Date().getDate();
-var year = years[new Date().getFullYear()];
+// var year = years[new Date().getYear()];
+var year = new Date().getFullYear();
 var currentTime = new Date().getHours();
+// var rightNow = newDate();
+// console
 
 if (date === 1 || date === 21 || date == 31) {
   currentDate.text(day + " " + month + " " + date + "st" + ", " + year);
@@ -103,7 +106,7 @@ if (date === 1 || date === 21 || date == 31) {
 var timeBlock = $(".time-block");
 
 // return the attribute value
-//it returns the value of the FIRST matched element
+// it returns the value of the FIRST matched element
 var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
 
 // using time, determine whether the task is past, present or future
@@ -128,7 +131,18 @@ function renderTasks() {
 }
 
 //click event to save users input, should link to the save button but for some reason this shit ISN'T WORKING
+// $(".saveBtn").on("click", function () {
+//   var savedInput = $(this).prev().children().val();
+//   localStorage.setItem("userInput", savedInput);
+//   console.log(savedInput);
+// });
+
 $(".saveBtn").on("click", function () {
-  var savedInput = $(this).prev().children().val();
-  localStorage.setItem("userInput", savedInput);
+  //console.log(this)
+  $(".task").each(function (i) {
+    var text = $(this).val();
+    var time = $(this).attr(id);
+    console.log(time, text);
+    localStorage.setItem(time, text);
+  });
 });
