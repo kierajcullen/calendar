@@ -10,10 +10,10 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  /* padding: 10px; */
+  padding: 10px;
   width: 100%;
-  /* even though the text area is in the body it will not center this */
   text-align: center;
+  margin: auto;
 }
 
 .jumbotron {
