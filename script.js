@@ -1,44 +1,3 @@
-//Declare Variables
-
-//Display date at the top of the page
-// //Must update, use jquery
-// $("#mydate").datepicker({});
-// mindate = 0
-
-// Date
-// Using date object
-// var currentDay = new Date();
-// var date =
-//   currentDay.getMonth() +
-//   1 +
-//   "-" +
-//   currentDay.getDate() +
-//   "-" +
-//   currentDay.getFullYear();
-// // why does this have to be declared after
-// $("#currentDay").text(date);
-
-// color-coded
-
-//Create a save button with an on-click event
-
-// Local storage
-
-// var currentDate = $("#currentDay");
-
-// currentDate.text(
-//   days[new Date().getDay()] +
-//     ", " +
-//     mons[new Date().getMonth()] +
-//     " " +
-//     new Date().getDate() +
-//     "th"
-// );
-
-// set item and get item with stringify
-// grab array with json.parse
-// add the classes with colors, military time
-
 var currentDate = $("#currentDay");
 
 var months = [
@@ -95,7 +54,7 @@ var timeBlock = $(".timeBlock");
 
 // return the attribute value
 // it returns the value of the FIRST matched element
-var timeBlockValue = parseInt($(timeBlock[i]).attr("value"));
+var timeBlockValue = parseInt($(timeBlock).attr("value"));
 
 // using time, determine whether the task is past, present or future
 for (var i = 0; i < timeBlock.length; i++) {
@@ -109,19 +68,31 @@ for (var i = 0; i < timeBlock.length; i++) {
   }
 }
 
-// push to local storage as an array
-var userInput = [];
-
 $(".saveBtn").on("click", function () {
   //console.log(this)
   $(".task").each(function (i) {
     var text = $(this).val();
     // use dollar sign in console when using jquery
     console.log(this);
-    // console.log($(this).parent().parent());
+    // point to the ids for each time value
     var time = $(this).attr("id");
     console.log(time, text);
     localStorage.setItem(time, text);
+    //get item to get from local storage
     //display the local storage
   });
 });
+// try to push users info to an array? parseInt, stringify, preventDefault()
+var renderInput = function () {
+  $("#input8").text(localStorage.getItem("input8"));
+  $("#input9").text(localStorage.getItem("input9"));
+  $("#input10").text(localStorage.getItem("input10"));
+  $("#input11").text(localStorage.getItem("input11"));
+  $("#input12").text(localStorage.getItem("input12"));
+  $("#input13").text(localStorage.getItem("input13"));
+  $("#input14").text(localStorage.getItem("input14"));
+  $("#input15").text(localStorage.getItem("input15"));
+  $("#input16").text(localStorage.getItem("input16"));
+  $("#input17").text(localStorage.getItem("input17"));
+};
+renderInput();
