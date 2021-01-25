@@ -69,12 +69,14 @@ for (var i = 0; i < timeBlock.length; i++) {
 }
 
 $(".saveBtn").on("click", function () {
-  //console.log(this)
+  // each replaces a for loop
+  // can you replace i with any?
   $(".task").each(function (i) {
     var text = $(this).val();
     // use dollar sign in console when using jquery
     console.log(this);
     // point to the ids for each time value
+    // calls the attribute of the id
     var time = $(this).attr("id");
     console.log(time, text);
     localStorage.setItem(time, text);
